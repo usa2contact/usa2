@@ -1,0 +1,112 @@
+.titulo{
+    color: rgb(36, 35, 35);
+    text-align: center;
+}
+.galeria{
+    background: rgb(238, 238, 238);
+    color: white;
+    text-align: center;
+}
+.carta{
+    color: white;
+    text-align: center;
+}
+
+/*ESTILOS DE LAgALERÍA PERFECTA (No Tocar)*/
+
+.galeria{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 1000px;
+}
+
+.galeria__img{
+    width: 140px;
+    height: 240px;
+    margin-bottom: 25px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+.galeria__img:hover{
+   filter: brightness(100%);
+   cursor:pointer;
+}
+
+/*ESTILOS DEL MODAL*/
+
+.modal {
+    display: none;
+}
+
+.modal:target {/*Aqui si aparece el modal*/
+    display: block;/*Es un bloque que se estira hasta los bordes*/
+    background: rgba(0,0,0,0.9);/*con rbga para que el fondo sea un poco trasparente*/ 
+    position: fixed; /*para que se mantenga fijo */
+    top: 0;/*Para que el fondo transparente se coloque arriba */
+    left: 0;/*Para que el fondo transparente, se coloque o comience desde el lado Izquierdo*/
+    width: 100%;/*Para que el fondo transparente tenga el ancho de la pantalla*/
+    height: 100%;/*Para que el fondo transparente tenga el alto de la pantalla*/
+}
+
+.modal h3 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;/*para que el bloque del titulo h3 de las imagenes, se ponga con 20 px desde el tope y 0 a la izquierda*/
+}
+
+.imagen {/*Aqui está la división donde va la imagen del modal*/
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen a {
+    color: #ffffff;
+    font-size: 60px;
+    text-decoration: none;/*Para que se ponga subrrallado, como un link*/
+    margin: 0 5px; /*Para que se mantenga en el 0 px del eje vertical y 5 px de distancia (horizontal) de la foto*/
+                   /*osea separa el icono de la foto*/
+ }
+
+.imagen a:nth-child(2){ /*Esta es la etiqueta <a> que contiene a la imagen*/
+    margin: 0; /*Esto es para algo de la imagen, para que no empuje el > de la derecha*/
+    height: 100%;
+    flex-shrink: 0;/*Esto es para que la imagen, se reduzca un poco cada vez que se reduce la pantalla y no empuje el > de la derecha*/
+}
+
+.imagen img {
+    width: 95%;/*Este es el ancho de la imagen, en porcentaje o pixeles*/
+    height:95%;/*Este es el alto de la imagen, en porcentaje o pixeles*/
+    max-width: 100%;
+    border: 2px solid rgb(192, 188, 188);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;/*Para que sea un bloque*/
+    background: #fff;/*Para el fondo del bloque*/
+    width: 25px;/*Para que el bloque se acoret a 25 px, desde la derecha*/
+    height: 25px;/*Para que el bloque se acoret a 25 px, a lo alto*/
+    margin: 15px auto;/*Para que esté separado de la foto 15 Px, También auto, para que el bloque con la letra x se coloque en el medio*/
+    text-align: center;/*Para que la x se coloque en el medio del bloque de 25 px*/
+    text-decoration: none;/*Para que se ponga subrrallado, como un link*/
+    font-size: 25px;/*tamaño de la x*/
+    color: #000;/*color de la x*/
+    padding: 5px;/*separación de la x, con respecto al bloque que la contiene*/
+    border-radius: 50%;/*Para que el bloque se ponga redondo*/
+    line-height: 25px;/*algo, para que se ponga la x se coloque más en el medio*/
+}
